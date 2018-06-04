@@ -11,6 +11,19 @@ export class AppComponent implements OnInit{
   public hierarchy: TreeNode[];
   public selectedNode: TreeNode;
 
+  public expandAll(): void {
+    for (let hierarchy of this.hierarchy) {
+      this.expandNode(hierarchy, true);
+    }
+  }
+
+  public collapseAll(): void {
+    for (let hierarchy of this.hierarchy) {
+      this.expandNode(hierarchy, false);
+    }
+  }
+
+
 
   public onNodeExpandCollapse(event): void {
     let timer = Date.now();

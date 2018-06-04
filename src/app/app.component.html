@@ -1,3 +1,7 @@
+<div>
+  <button (click)="expandAll()">Expand All</button>
+  <button (click)="collapseAll()">Collapse All</button>
+</div>
 <div style="width: 100%">
   <p-tree [value]="hierarchy" selectionMode="single" [(selection)]="selectedNode" [emptyMessage]="'Loading...'"
           (onNodeExpand)="onNodeExpandCollapse($event)" (onNodeCollapse)="onNodeExpandCollapse($event)">
